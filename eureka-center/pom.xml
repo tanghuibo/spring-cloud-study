@@ -9,7 +9,7 @@
         <relativePath>../</relativePath>
     </parent>
     <groupId>io.github.tanghuibo.springcloudystudy</groupId>
-    <artifactId>spring-cloudy-study-center</artifactId>
+    <artifactId>eureka-center</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>center</name>
     <description>注册中心</description>

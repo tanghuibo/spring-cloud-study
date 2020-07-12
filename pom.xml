@@ -30,6 +30,6 @@
         </dependencies>
     </dependencyManagement>
     <modules>
-        <module>./spring-cloudy-study-center</module>
+        <module>./eureka-center</module>
     </modules>
 </project>
