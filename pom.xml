@@ -14,6 +14,7 @@
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>2.2.3.RELEASE</spring-cloud.version>
+        <servlet-api.version>4.0.1</servlet-api.version>
     </properties>
     <packaging>pom</packaging>
     <dependencyManagement>
@@ -37,11 +38,17 @@
                 <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
                 <version>${spring-cloud.version}</version>
             </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${servlet-api.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <modules>
         <module>./eureka-center</module>
         <module>./first-client</module>
         <module>./getaway</module>
+        <module>./basic</module>
     </modules>
 </project>

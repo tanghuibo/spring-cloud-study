@@ -1,6 +1,6 @@
 eureka:
   instance:
-    appname: first-client
+    appname: getaway
   client:
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka/

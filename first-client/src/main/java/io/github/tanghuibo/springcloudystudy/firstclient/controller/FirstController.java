@@ -1,4 +1,4 @@
-package io.github.tanghuibo.springcloudystudy.firstclient;
+package io.github.tanghuibo.springcloudystudy.firstclient.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
