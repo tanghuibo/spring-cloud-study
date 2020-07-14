@@ -6,9 +6,7 @@
         <groupId>io.github.tanghuibo.springcloudystudy</groupId>
         <artifactId>parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../</relativePath>
     </parent>
-    <groupId>io.github.tanghuibo.springcloudystudy</groupId>
     <artifactId>eureka-center</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>center</name>
