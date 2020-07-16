@@ -15,3 +15,7 @@ zuul:
     firstClient:
       path: /first-client/**
       serviceId: first-client
+
+    secondClient:
+      path: /second-client/**
+      serviceId: second-client
