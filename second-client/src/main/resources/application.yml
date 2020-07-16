@@ -1,0 +1,12 @@
+eureka:
+  instance:
+    appname: first-client
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+spring:
+  application:
+    name: second-client
+
+server:
+  port: 8002
