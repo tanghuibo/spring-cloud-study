@@ -1,4 +1,4 @@
-package io.github.tanghuibo.springcloudystudy.firstclient;
+package io.github.tanghuibo.springcloudystudy.firstclientimpl;
 
 import io.github.tanghuibo.springcloudystudy.baisc.annotation.EnableWebLogFilter;
 import org.springframework.boot.SpringApplication;

@@ -48,6 +48,7 @@
     <modules>
         <module>./eureka-center</module>
         <module>./first-client</module>
+        <module>./first-client-impl</module>
         <module>./second-client</module>
         <module>./getaway</module>
         <module>./basic</module>
