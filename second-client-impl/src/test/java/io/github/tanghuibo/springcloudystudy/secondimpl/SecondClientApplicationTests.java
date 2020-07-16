@@ -1,4 +1,4 @@
-package io.github.tanghuibo.springcloudystudy.second;
+package io.github.tanghuibo.springcloudystudy.secondimpl;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
