@@ -1,7 +1,7 @@
 package io.github.tanghuibo.springcloudystudy.secondimpl.controller;
 
+import io.github.tanghuibo.springcloudystudy.firstclient.api.FirstClient;
 import io.github.tanghuibo.springcloudystudy.second.client.SecondClient;
-import io.github.tanghuibo.springcloudystudy.secondimpl.client.impl.FirstClientImpl;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 public class SecondController implements SecondClient {
 
     @Resource
-    FirstClientImpl firstClient;
+    FirstClient firstClient;
 
     @Override
     public String sayHello(String username) {

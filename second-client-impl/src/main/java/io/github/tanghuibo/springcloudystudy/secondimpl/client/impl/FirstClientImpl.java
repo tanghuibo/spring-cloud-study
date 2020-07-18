@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.FeignClient;
  * @date 2020/7/17上午12:47
  */
 @FeignClient(
-        name = "first-client"
+        name = "first-client",contextId = "first-client"
 )
 public interface FirstClientImpl extends FirstClient {
 }
