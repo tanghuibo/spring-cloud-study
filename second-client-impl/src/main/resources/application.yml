@@ -1,6 +1,6 @@
 eureka:
   instance:
-    appname: first-client
+    appname: second-client
   client:
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka/
@@ -10,3 +10,29 @@ spring:
 
 server:
   port: 8002
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - 'hystrix.stream'
+          - 'info'
+
+feign:
+  client:
+    config:
+      default:
+        readTimeout: 3000
+        connectTimeout: 3000
+
+  hystrix:
+    enabled: true
