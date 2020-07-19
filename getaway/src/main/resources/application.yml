@@ -1,21 +1,26 @@
-eureka:
-  instance:
-    appname: getaway
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:8761/eureka/
 spring:
   application:
     name: getaway
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: "127.0.0.1:8849"
+
+    gateway:
+      routes:
+        - id: first-client
+          uri: lb://first-client
+          predicates:
+            - Path=/first-client/**
+          filters:
+            - RewritePath=/first-client/(?<segment>.*), /$\{segment}
+
+        - id: second-client
+          uri: lb://second-client
+          predicates:
+            - Path=/second-client/**
+          filters:
+            - RewritePath=/second-client/(?<segment>.*), /$\{segment}
 server:
   port: 8080
-
-zuul:
-  routes:
-    firstClient:
-      path: /first-client/**
-      serviceId: first-client
-
-    secondClient:
-      path: /second-client/**
-      serviceId: second-client

@@ -1,31 +1,13 @@
-eureka:
-  instance:
-    appname: second-client
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:8761/eureka/
 spring:
   application:
     name: second-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: "127.0.0.1:8849"
 
 server:
   port: 8002
-
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 3000
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include:
-          - 'hystrix.stream'
-          - 'info'
 
 feign:
   client:
@@ -33,6 +15,5 @@ feign:
       default:
         readTimeout: 3000
         connectTimeout: 3000
-
   hystrix:
     enabled: true
