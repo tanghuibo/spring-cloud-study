@@ -52,4 +52,15 @@
         <module>./getaway</module>
         <module>./basic</module>
     </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <!--mvn versions:set -DnewVersion=0.0.1-SNAPSHOT-->
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.7</version>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
