@@ -6,6 +6,14 @@ spring:
       discovery:
         server-addr: "127.0.0.1:8848"
     sentinel:
+      datasource:
+        ds:
+          nacos:
+            serverAddr: "127.0.0.1:8848"
+            dataId: ${spring.application.name}-sentinel
+            groupId: DEFAULT_GROUP
+            ruleType: flow
+            dataType: json
       transport:
         dashboard: "127.0.0.1:8850"
 server:
