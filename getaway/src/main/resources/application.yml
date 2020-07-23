@@ -1,7 +1,14 @@
 spring:
+  zipkin:
+    base-url: "http://127.0.0.1:9411"
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1
   application:
     name: getaway
-
   cloud:
     nacos:
       discovery:
