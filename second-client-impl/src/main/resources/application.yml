@@ -38,4 +38,4 @@ feign:
     enabled: true
 logging:
   pattern:
-    console: "%clr(%d{${yyyy-MM-dd HH:mm:ss.SSS}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n"
+    console: "%clr(%d{${yyyy-MM-dd HH:mm:ss.SSS}}){faint} [%X{traceId},%X{spanId}] [%thread] %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n"
