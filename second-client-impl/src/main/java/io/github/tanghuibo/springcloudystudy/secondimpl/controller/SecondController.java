@@ -3,6 +3,8 @@ package io.github.tanghuibo.springcloudystudy.secondimpl.controller;
 import io.github.tanghuibo.springcloudystudy.firstclient.api.FirstClient;
 import io.github.tanghuibo.springcloudystudy.second.client.SecondClient;
 import io.github.tanghuibo.springcloudystudy.secondimpl.client.impl.BadFirstClientImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +24,9 @@ public class SecondController implements SecondClient {
     @Resource
     BadFirstClientImpl badFirstClient;
 
+    Logger logger = LoggerFactory.getLogger(SecondController.class);
+
+
     @Override
     public String sayHello(String username) {
         return String.format("hello %s, I am second client", username);
@@ -29,6 +34,7 @@ public class SecondController implements SecondClient {
 
     @GetMapping("testFeignClient")
     public String testFeignClient(@RequestParam String username) {
+        logger.info("run testFeignClient");
         return String.format("from feign: %s", firstClient.sayHello(username));
     }
 
@@ -45,6 +51,12 @@ public class SecondController implements SecondClient {
             e.printStackTrace();
         }
         return "timeout";
+    }
+
+    @GetMapping("error")
+    public String error() {
+        logger.error("happen error");
+        throw new RuntimeException("error");
     }
 
 }
